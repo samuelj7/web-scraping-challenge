@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Costa Rica Weather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    <h1><b>Latest Mars News</b></h1>
+    <h2>NASA's Mars rovers drivers need your help</h2>
+    <p>Using an online tool to mark Martian terrain types, you can train an artificial intelligence algorithm that could improve the way engineers guide the Curiosity Rover.</p>
+    <h1>Featured Mars Image</h1>
+    <div class='text-left'>
+      <img src="{{ mars.mars_img }}" alt="Mars"/>
+    </div>
+
+    <div class='col-4'>
+      <h1 class="description-header"> 
+        <b>Mars Facts</b>
+      </h1>
+      <div class='text-left'>
+        {{ mars.html_table | safe }}
+      </div>
+    </div>
+  </div>
+
+ 
+    <h3 class="text-center"><b>Mars Hemispheres</b></h3>
+    <hr>
+ 
+<div class='row'>
+  <div class='col-md-6'>
+    <h5>{{mars.hemisphere_list }}</h5>
+    <img src="{{ mars.hemisphere_list }}" alt="Cerberus">
+  </div>
+  
+  
+
+</div>
+ </body>
+
+ </html>
